@@ -43,8 +43,8 @@ models:
 
     canonical:
       +materialized: table
-      +schema: sales_canonical
+      +schema: canonical2
 
     curated:
       +materialized: table
-      +schema: sales_curated
+      +schema: curated2
