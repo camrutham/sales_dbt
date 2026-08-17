@@ -40,14 +40,14 @@ models:
     staging:
       +materialized: view
       +schema: sales_raw
-      +database: STAGE_SALES
+#      +database: STAGE_SALES
 
     canonical:
       +materialized: table
       +schema: canonical2
-      +database: STAGE_SALES
+#      +database: STAGE_SALES
 
     curated:
       +materialized: table
       +schema: curated2
-      +database: STAGE_SALES
+#      +database: STAGE_SALES
