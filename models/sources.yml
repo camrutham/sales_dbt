@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: sales_raw
+    database: sales
+    schema: sales_raw
+    description: "Raw source database for sales domain"
+    tables:
+      - name: contract_raw
+        description: "Raw contract versions data"
+      - name: customer_raw
+        description: "Raw customer master data"
+      - name: product_raw
+        description: "Raw product master data"
+      - name: direct_sale_lines_raw
+        description: "Raw direct sales transactions"
+      - name: indirect_sale_lines_raw
+        description: "Raw indirect sales transactions"

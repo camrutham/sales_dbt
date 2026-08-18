@@ -21,7 +21,7 @@ with customer_extract as (
         phone,
         date_created,
         date_updated    
-    from sales.sales_raw.customer_raw
+    from {{ source('sales_raw', 'customer_raw') }}
     where customer_type = 'SMB'
     
 {% if is_incremental() %}

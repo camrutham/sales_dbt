@@ -13,7 +13,7 @@
 WITH raw_data AS (
     SELECT DISTINCT
         c.*
-    FROM sales.sales_raw.contract_raw c
+    FROM {{ source('sales_raw', 'contract_raw') }} c
     {% if is_incremental() %}
     WHERE COALESCE(c.DATE_UPDATED, c.DATE_CREATED) > COALESCE(
         (SELECT MAX(SRC_SYS_DATE_UPDATED) FROM {{ this }}),

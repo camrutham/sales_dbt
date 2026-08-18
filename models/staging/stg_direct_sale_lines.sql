@@ -18,4 +18,4 @@ SELECT distinct
     DATE_UPDATED,
     'DIRECT' AS SALE_TYPE,
     'MYSQL' AS SOURCE_SYSTEM
-FROM sales.sales_raw.direct_sale_lines_raw
+FROM {{ source('sales_raw', 'direct_sale_lines_raw') }}

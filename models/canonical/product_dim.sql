@@ -21,7 +21,7 @@ WITH product_extract AS (
         date_created,
         date_updated
 
-    FROM sales.sales_raw.product_raw
+    FROM {{ source('sales_raw', 'product_raw') }}
     
     {% if is_incremental() %}
 
